@@ -35,19 +35,19 @@ namespace MyGame
                 if (health < 0) health = 0;
             }
         }
-        private void GetHealth()
+        public void GetHealth()
         {
 
             return;
         }
 
-        private void GetShield()
+        public void GetShield()
         {
 
             return;
         }
 
-        private string SetName(string playerName)
+        public string SetName(string playerName)
         {
             string name = playerName;
             int stringLength = name.Length;
