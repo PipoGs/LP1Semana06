@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MyGame;
 
 namespace MyGame
 {
@@ -54,9 +55,7 @@ namespace MyGame
             if (stringLength > 8)
             {
                 name = name.Substring(0, 8);
-                System.Console.WriteLine(name);
             }
-            System.Console.WriteLine(name);
             return name;
 
 
