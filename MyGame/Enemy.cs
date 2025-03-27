@@ -47,7 +47,7 @@ namespace MyGame
 
         public string SetName(string playerName)
         {
-            string name = playerName;
+            name = playerName;
             int stringLength = name.Length;
 
 
@@ -56,11 +56,7 @@ namespace MyGame
                 name = name.Substring(0, 8);
                 System.Console.WriteLine(name);
             }
-            else
-            {
-                System.Console.WriteLine(name);
-
-            }
+            System.Console.WriteLine(name);
             return name;
 
 
