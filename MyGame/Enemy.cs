@@ -64,6 +64,27 @@ namespace MyGame
 
             }
             return name;
+
+
+        }
+
+        internal void PickupPowerUp(PowerUp powerUp, float i)
+        {
+            if (powerUp == PowerUp.health)
+            {
+                health += i;
+                if (health > 100)
+                    health = 100;
+
+            }
+            else if (powerUp == PowerUp.shield)
+            {
+                shield += 100;
+                if (shield > 100)
+                    shield = 100;
+
+            }
+
         }
     }
 }
