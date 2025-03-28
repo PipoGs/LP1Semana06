@@ -11,6 +11,7 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        private static int powerUpsCounter;
 
 
         public Enemy(string name)
@@ -18,6 +19,11 @@ namespace MyGame
             this.name = name;
             health = 100;
             shield = 0;
+        }
+
+        static Enemy()
+        {
+            powerUpsCounter = 0;
         }
 
         public string GetName()
@@ -77,7 +83,8 @@ namespace MyGame
                     shield = 100;
 
             }
-
+            powerUpsCounter += 1;
         }
+        internal static int GetPowerUpsCounter() => powerUpsCounter;
     }
 }
