@@ -46,7 +46,7 @@ namespace MyRoguelike
 
         public void PrintEnemies()
         {
-            for (int i = 0; i < Rooms.Length; i++)
+            for (int i = 0; i < NumberOfRooms.Length; i++)
             {
                 if (rooms[i] != null)
                 {
