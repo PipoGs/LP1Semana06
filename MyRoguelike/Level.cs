@@ -11,19 +11,21 @@ namespace MyRoguelike
     {
         private int NumberOfRooms;
         private int Toughness;
-        private Enemy[] rooms;
+        private Enemy[] Rooms;
 
         public Level(int NumberOfRooms,enum Toughness)
         {
-            toughness = Toughness;
-            Rooms = new Enemy[NumberOfRooms];
-          
+            NumberOfRooms = NumberOfRooms;
+            Toughness = Toughness;
+            NumberOfEnemies = 0;
+            EnemiesInRoom = new Enemy[NumberOfRooms];
         }
 
          public void SetEnemyInRoom(int roomNumber, Enemy enemy)
         {
 
-            rooms[roomNumber] = enemy;
+            Rooms[roomNumber] = enemy;
+            NumberOfEnemies++; 
         
         }
 
@@ -32,7 +34,7 @@ namespace MyRoguelike
             return NumberOfRooms;
         }
 
-        public int GetToughness()
+        public Toughness GetToughness()
         {
             return Toughness;
         }
@@ -44,11 +46,12 @@ namespace MyRoguelike
 
         public void PrintEnemies()
         {
-            for (int i = 0; i < rooms.Length; i++)
+            for (int i = 0; i < Rooms.Length; i++)
             {
                 if (rooms[i] != null)
                 {
-                    Console.WriteLine($"{i.ToWords()} room: {rooms[i].GetName()}");
+                    string roomName = i.ToOrdinalWords(new CultureInfo("en")).Transform(To.TitleCase);
+                    Console.WriteLine($"{roomName} room: {Rooms[i].GetName()}");
                 }
             }
         }
