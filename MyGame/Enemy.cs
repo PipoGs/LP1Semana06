@@ -78,7 +78,7 @@ namespace MyGame
             }
             else if (powerUp == PowerUp.shield)
             {
-                shield += 100;
+                shield += i;
                 if (shield > 100)
                     shield = 100;
 

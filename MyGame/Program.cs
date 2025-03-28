@@ -25,10 +25,11 @@ namespace MyGame
             {
                 newEnemy.TakeDamage(15);
                 newEnemy.PickupPowerUp(PowerUp.health, 5);
-                newEnemy.PickupPowerUp(PowerUp.shield, 500);
+                newEnemy.PickupPowerUp(PowerUp.shield, 100);
                 Console.WriteLine($"{newEnemy.GetName()} {newEnemy.GetHealth()} {newEnemy.GetShield()}");
 
             }
+            System.Console.WriteLine($"The number of PowerUps picked up was {Enemy.GetPowerUpsCounter()}");
 
         }
     }
